@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительный магазин ОРБИТА Южноуральск</title>
+    <meta name="description" content="Магазин товаров для дома, дачи, ремонта и строительства по всей России: Южноуральск, Челябинск, Екатеринбург, Москва, Санкт-Петербург, Волгоград, Казань, Краснодар, Омск, и т. д.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap+Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="main">
+        <div class="page_head">
+            <div class="page_head1">
+                <img src="assets/images/logo.jpg" class="logo" alt="logo">
+                <div class="store_name">
+                    <div class="store_name1">Орбита</div>
+                    <h1 class="store_name2">Магазин Инструмента и Крепежа</h1>
+                </div>
+                <div class="phone">
+                    <i class='fas fa-phone' style='font-size:2.5vw'></i>
+                    <div class="phone_num">+7 (908) 080-05-41</div>
+                </div>
+                <div class="address">
+                    <i class="fa fa-map-marker" style="font-size:2.5vw"></i>
+                    <a href="https://yandex.by/maps/11227/ugnouralsk/house/ulitsa_mira_56a/YkgYdABoQEUOQFtufXh1cHlrZQ==/?ll=61.278909%2C54.441581&z=16" class="header_address" target="_blank">Южноуральск, улица Мира, 56А</a>
+                </div>
+                <a href="#" class="login">
+                    <img class="sign_in" src="assets/icons/sign-in-alt.svg" alt="sign_in">
+                    <div class="login_text">Вход</div>
+                </a>
+            </div>
+            <div class="page_head2" id="fixedHeader">
+                <div class="catalog" id="catalog_head" onclick="displayMenu()">
+                    <i class="catalog_icon fa fa-align-justify" style="font-size:25px;"></i>
+                    <div class="catalog_name">Каталог товаров</div>    
+                </div>
+                <div class="serach">
+                    <div class="search_icon"><i class="fa fa-search" style="font-size:15px"></i></div>
+                    <div class="input_container" onkeyup="searchBarFunc()"><input class="search_box" id="search_box" type="text" placeholder="Поиск"></div>
+                    <div class="find" onclick="searchBarFunc()">Найти</div>
+                </div>
+                <div class="cart_content" id="cartContent">
+                    <!-- <div class="cart_all_products">
+                    </div> -->
+                    <!-- <div class="cart_total">
+                        <div class="total_txt">ИТОГО:<div class="cart_totalCost">2000</div></div>
+                        <a href="#" class="go_to_cart">В Корзину</a>
+                    </div> -->
+                </div> 
+                <a href="#" class="cart" id="mainCart">
+                    <i class="fa fa-shopping-cart" style="font-size:27px"></i>
+                    <div class="cart_name">Корзина</div>
+                    <div class="number_of_items">0</div>
+                </a>
+            </div>  
+        </div>
+        <div class="page_body">
+            <div class="menu" id="catalog_menu">
+                <ul class="menu_categories">
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/instrument.svg" alt="electrical_instruments"></div>
+                        <div class="menu_categories_item_name one_line">Электроинструмент</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/benzo.svg" alt="benzo_instruments"></div>
+                        <div class="menu_categories_item_name one_line">Бензоинструмент</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/welding.svg" alt="welding_instruments"></div>
+                        <div class="menu_categories_item_name">Сварочное оборудование</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/grass_cutter.svg" alt="grass_cutter"></div>
+                        <div class="menu_categories_item_name one_line">Все для сада и дачи</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/heater.svg" alt="stanki"></div>
+                        <div class="menu_categories_item_name one_line">Тепловое оборудование</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/electric_generator.svg" alt="electric_generator"></div>
+                        <div class="menu_categories_item_name one_line">Силовая техника</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/pump.svg" alt="pumps"></div>
+                        <div class="menu_categories_item_name one_line">Насосное оборудование</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/osnastka.svg" alt="electric_generator"></div>
+                        <div class="menu_categories_item_name one_line">Оснастка</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/fastener.svg" alt="fastener"></div>
+                        <div class="menu_categories_item_name one_line">Крепеж</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/instrument2.svg" alt="hand_instruments"></div>
+                        <div class="menu_categories_item_name one_line" >Ручной инструмент</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/lamp.svg" alt="electrical_parts"></div>
+                        <div class="menu_categories_item_name one_line">Электрика</div>
+                    </li>
+                    <li class="menu_categories_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/backup.svg" alt="backup_parts"></div>
+                        <div class="menu_categories_item_name one_line">Запасные части</div>
+                    </li>
+                    <li class="menu_categories_item last_item">
+                        <div class="menu_icon"><img class="menu_icon_img" src="assets/icons/menu/PPE.svg" alt="PPE"></div>
+                        <div class="menu_categories_item_name">Средства индивидуальной защиты</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_hidden_content">
+            </div>
+            <div class="filter">
+                <div class="sort">Сортировка товаров</div>
+                <button class="sort_btn" id="sort-asc">Цена по возрастанию</button>
+                <button class="sort_btn" id="sort-desc">Цена по убыванию</button>
+            </div>
+            <div id="slideshow">
+                <div class="slideshow_button" id="prev" onclick="plusSlides(-1)">&#9664;</div>
+                <img src="assets/images/slideshow/slide01.jpg" class="slideshow_img" id="img01" alt="img01">
+                <img src="assets/images/slideshow/slide02.jpg" class="slideshow_img" id="img02" alt="img02">
+                <img src="assets/images/slideshow/slide03.jpg" class="slideshow_img" id="img03" alt="img03">
+                <img src="assets/images/slideshow/slide04.jpg" class="slideshow_img" id="img04" alt="img04">
+                <img src="assets/images/slideshow/slide05.jpg" class="slideshow_img" id="img05" alt="img05">
+                <img src="assets/images/slideshow/slide06.jpg" class="slideshow_img" id="img06" alt="img06">
+                <img src="assets/images/slideshow/slide07.jpg" class="slideshow_img" id="img07" alt="img07">
+                <img src="assets/images/slideshow/slide08.jpg" class="slideshow_img" id="img08" alt="img08">
+                <img src="assets/images/slideshow/slide09.jpg" class="slideshow_img" id="img09" alt="img09">
+                <img src="assets/images/slideshow/slide10.jpg" class="slideshow_img" id="img10" alt="img10">
+                <img src="assets/images/slideshow/slide11.jpg" class="slideshow_img" id="img11" alt="img11">
+                <img src="assets/images/slideshow/slide12.jpg" class="slideshow_img" id="img12" alt="img12">
+                <img src="assets/images/slideshow/slide13.jpg" class="slideshow_img" id="img13" alt="img13">
+                <img src="assets/images/slideshow/slide14.jpg" class="slideshow_img" id="img14" alt="img14">
+                <div class="slideshow_button" id="next" onclick="plusSlides(1)">&#9654;</div>
+            </div>
+            <div class="products"> 
+                <div class="products_container">
+                    <div class="products_title">Новинки</div>
+                    <div class="products_categories" id="new_products">
+                        <div class="product_item" price='5319'>
+                            <div class="code">12334</div>
+                            <div class="brand">Bosch</div>
+                            <div class="product_title">Аккумуляторная шлифмашина</div>
+                            <img class="product_img" src="assets/images/newProducts/p1.jpg" alt="p1">
+                            <div class="product_description">Аккумуляторная эксцентриковая шлифмашина Bosch</div>
+                            <div class="product_item_price">5319</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='7649'>
+                            <div class="code">12335</div>
+                            <div class="brand">Bosch</div>
+                            <div class="product_title">Аккумуляторная шлифмашина</div>
+                            <img class="product_img" src="assets/images/newProducts/p2.jpg" alt="p2">
+                            <div class="product_description">Аккумуляторная мультишлифмашина Bosch EasySander 12</div>
+                            <div class="product_item_price">7649</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='3390'>
+                            <div class="code">12336</div>
+                            <div class="brand">Daewoo</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p3.jpg" alt="p3">
+                            <div class="product_description">Ударная дрель DAEWOO DAD 950</div>
+                            <div class="product_item_price">3390</div>
+                            <div class="product_item_availability">Нет в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='2990'>
+                            <div class="code">12337</div>
+                            <div class="brand">Daewoo</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p4.jpg" alt="p4">
+                            <div class="product_description">Ударная дрель DAEWOO DAD 850</div>
+                            <div class="product_item_price">2990</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='10129'>
+                            <div class="code">12338</div>
+                            <div class="brand">Bosch</div>
+                            <div class="product_title">Аккумуляторная шлифмашина</div>
+                            <img class="product_img" src="assets/images/newProducts/p5.jpg" alt="p5">
+                            <div class="product_description">Аккумуляторная угловая шлифмашина Bosch GWS 12V-76 Professional Solo 0.601.9F2.000</div>
+                            <div class="product_item_price">10129</div>
+                            <div class="product_item_availability">Нет в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='39129'>
+                            <div class="code">12339</div>
+                            <div class="brand">Bosch</div>
+                            <div class="product_title">Аккумуляторная шлифмашина</div>
+                            <img class="product_img" src="assets/images/newProducts/p6.jpg" alt="p6">
+                            <div class="product_description">Аккумуляторная углошлифмашина Bosch GWS 18V-10 SC</div>
+                            <div class="product_item_price">39129</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='4370'>
+                            <div class="code">12340</div>
+                            <div class="brand">Alteco</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p7.jpg" alt="p7">
+                            <div class="product_description">Аккумуляторная дрель-шуруповёрт Alteco CD 0413 CD 2110.1/21V</div>
+                            <div class="product_item_price">4370</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='2669'>
+                            <div class="code">12341</div>
+                            <div class="brand">Alteco</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p8.jpg" alt="p8">
+                            <div class="product_description">Ударная дрель Alteco DP 600-13.1 22979</div>
+                            <div class="product_item_price">2669</div>
+                            <div class="product_item_availability">Нет в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='3061'>
+                            <div class="code">3061</div>
+                            <div class="brand">Alteco</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p9.jpg" alt="p9">
+                            <div class="product_description">Аккумуляторная дрель-шуруповёрт Alteco Standard CD 1210Li 13209</div>
+                            <div class="product_item_price">3061</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='3382'>
+                            <div class="code">12343</div>
+                            <div class="brand">Alteco</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p10.jpg" alt="p10">
+                            <div class="product_description">Аккумуляторная дрель-шуруповёрт Alteco CD 0410 CD 1210.1/12V</div>
+                            <div class="product_item_price">3382</div>
+                            <div class="product_item_availability">Нет в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='4290'>
+                            <div class="code">12344</div>
+                            <div class="brand">EINHELL</div>
+                            <div class="product_title">Аккумуляторная шлифмашина</div>
+                            <img class="product_img" src="assets/images/newProducts/p11.jpg" alt="p11">
+                            <div class="product_description">Аккумуляторная эксцентриковая шлифмашина EINHELL TE-RS 18 Li-Solo 4462010</div>
+                            <div class="product_item_price">4290</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='3599'>
+                            <div class="code">12345</div>
+                            <div class="brand">EINHELL</div>
+                            <div class="product_title">Аккумуляторная шлифмашина</div>
+                            <img class="product_img" src="assets/images/newProducts/p12.jpg" alt="p12">
+                            <div class="product_description">Аккумуляторная угловая шлифмашина Einhell TE-AG 18 Li-Solo 4431110</div>
+                            <div class="product_item_price">3599</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='7999'>
+                            <div class="code">12346</div>
+                            <div class="brand">EINHELL</div>
+                            <div class="product_title">Аккумуляторная шлифмашина</div>
+                            <img class="product_img" src="assets/images/newProducts/p13.jpg" alt="p13">
+                            <div class="product_description">Аккумуляторная угловая шлифмашина EINHELL AXXIO 4431140</div>
+                            <div class="product_item_price">7999</div>
+                            <div class="product_item_availability">Нет в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='4490'>
+                            <div class="code">12334</div>
+                            <div class="brand">EINHELL</div>
+                            <div class="product_title">Аккумуляторная шлифмашина</div>
+                            <img class="product_img" src="assets/images/newProducts/p14.jpg" alt="p14">
+                            <div class="product_description">Аккумуляторная угловая шлифмашина Einhell PXC TC-AG 18/115 Li-Solo</div>
+                            <div class="product_item_price">4490</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='5619'>
+                            <div class="code">12348</div>
+                            <div class="brand">Bosch</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p15.jpg" alt="p15">
+                            <div class="product_description">Ударная дрель Bosch GSB 1600 RE 0.601.218.121</div>
+                            <div class="product_item_price">5619</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='16399'>
+                            <div class="code">12349</div>
+                            <div class="brand">Bosch</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p16.jpg" alt="p16">
+                            <div class="product_description">Дрель Bosch GBM 13-2 RE 0.601.1B2.000</div>
+                            <div class="product_item_price">16399</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='5119'>
+                            <div class="code">12350</div>
+                            <div class="brand">Bosch</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p17.jpg" alt="p17">
+                            <div class="product_description">Дрель Bosch GBM 10 RE 0.601.473.600</div>
+                            <div class="product_item_price">5119</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='8389'>
+                            <div class="code">12351</div>
+                            <div class="brand">Bosch</div>
+                            <div class="product_title">Дрель электрическая</div>
+                            <img class="product_img" src="assets/images/newProducts/p18.jpg" alt="p18">
+                            <div class="product_description">Ударная дрель Bosch GSB 16 RE 0.601.14E.500</div>
+                            <div class="product_item_price">8389</div>
+                            <div class="product_item_availability">Есть в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='3689'>
+                            <div class="code">12352</div>
+                            <div class="brand">Einhell</div>
+                            <div class="product_title">Гравер</div>
+                            <img class="product_img" src="assets/images/newProducts/p19.jpg" alt="p19">
+                            <div class="product_description">Гравер Einhell TH(TC)-MG 135 E 4419169</div>
+                            <div class="product_item_price">3689</div>
+                            <div class="product_item_availability">Нет в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                        <div class="product_item" price='2689'>
+                            <div class="code">12354</div>
+                            <div class="brand">Einhell</div>
+                            <div class="product_title">Гравер</div>
+                            <img class="product_img" src="assets/images/newProducts/p20.jpg" alt="p20">
+                            <div class="product_description">Гравер Einhell BT-MG 135/1</div>
+                            <div class="product_item_price">2689</div>
+                            <div class="product_item_availability">Нет в наличии</div>
+                            <a class="add_to_cart">
+                                <i class="fa fa-shopping-cart" style="font-size:20px"></i> В корзину
+                            </a>
+                        </div>
+                    </div>
+                    <!--pagination for the products (JS)-->
+                    <div class="pagination_container">
+                        <i class="disabled arrow-left fa fa-angle-double-left" style="font-size:20px"></i>
+                        <ul id="pagination">
+                        </ul>
+                        <i class="arrow arrow-right fa fa-angle-double-right" style="font-size:20px"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page_foot">
+            <div class="foot_contacts">
+                <div class="foot_title">Контакты:</div>
+                <div class="foot_el"><a href="mailto:xxxxxxxxxx@mail.ru" style="color: #fff; text-decoration: none;"><img class="foot_img" src="assets/icons/email.svg" alt="email"> xxxxxxxxxx@mail.ru</a></div>
+                <div class="foot_el"><a href="tel:+79080800541" style="color: #fff; text-decoration: none;"><img class="foot_img" src="assets/icons/phone_white.svg" alt="phone"> +7 (908) 080-05-41</a></div>
+                <div class="foot_title">Орбита в соцсетях</div>
+                <div class="foot_social_icons">
+                    <a href="https://vk.com/orbita_uzhnouralsk" target="_blank"><img class="foot_img" src="assets/icons/vk.png" alt="vk"></a>
+                    <a href="#" target="_blank"><img class="foot_img" src="assets/icons/fb.png" alt="fb"></a>
+                    <a href="#" target="_blank"><img class="foot_img" src="assets/icons/instagram.jpg" alt="instagram"></a>
+                    <a href="#" target="_blank"><img class="foot_img" src="assets/icons/telegram.png" alt="telegram"></a>
+                    <a href="https://wa.me/79191116771/?text=" target="_blank"><img class="foot_img" src="assets/icons/whatsapp.png" alt="whatsapp"></a>
+                </div>
+                <div class="foot_title">Режим Работы</div>
+                <div class="foot_work_schedule">
+                    <div class="day">Понедельник-Пятница</div>
+                    <div class="time"> 9:00 - 19:00</div>
+                    <br>
+                    <div class="day">Суббота-Воскресенье</div>
+                    <div class="time"> 9:00 - 18:00</div>
+                </div>
+    
+
+            </div>
+            <div class="foot_address">
+                <div class="foot_title">Адресс:</div>
+                <a href="https://yandex.by/maps/11227/ugnouralsk/house/ulitsa_mira_56a/YkgYdABoQEUOQFtufXh1cHlrZQ==/?ll=61.278909%2C54.441581&z=16" class="foot_address" target="_blank">
+                    <div class="foot_address_title"><img class="foot_img" src="assets/icons/location.png" alt="location">Южноуральск, улица Мира, 56А</div>
+                    <img class="foot_address_map" src="assets/images/location.JPG" alt="location_map">
+                </a>
+            </div>
+            <div class="copyright">
+                <img class="copyright_img" src="assets/icons/copyright.png" alt="copyright">  2020 - Строительный магазин ОРБИТА Южноуральск
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
